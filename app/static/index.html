@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MimoForge</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">MimoForge</p>
+          <h1>把百万 Token 变成可执行的软件交付能力</h1>
+          <p class="lede">
+            一次性摄入需求文档、仓库代码、CI 日志和部署清单，完成跨文件影响分析、工程脚手架生成、质量规划与 GitOps 交付。
+          </p>
+        </div>
+        <div class="hero-grid">
+          <div class="metric">
+            <span>7</span>
+            <small>agents</small>
+          </div>
+          <div class="metric">
+            <span>3</span>
+            <small>stacks</small>
+          </div>
+          <div class="metric">
+            <span>1</span>
+            <small>delivery chain</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel composer">
+        <div class="panel-head">
+          <h2>新建演示任务</h2>
+          <p>输入你的项目设想，MimoForge 会直接生成规划与交付工件。</p>
+        </div>
+        <form id="run-form">
+          <label>
+            项目名称
+            <input id="project_name" name="project_name" required value="MimoForge Demo" />
+          </label>
+          <label>
+            目标仓库路径
+            <input id="target_repo" name="target_repo" placeholder="/Users/you/Code/your-repo" />
+          </label>
+          <label>
+            优先技术栈
+            <select id="preferred_stack" name="preferred_stack">
+              <option value="">自动推理</option>
+              <option value="fastapi">FastAPI</option>
+              <option value="go-gin">Go + Gin</option>
+              <option value="spring-boot">Spring Boot</option>
+            </select>
+          </label>
+          <label class="full">
+            项目需求
+            <textarea id="prompt" name="prompt" rows="8" required>我想做一个面向复杂软件工程团队的多智能体交付平台，要求支持长链推理、仓库级别上下文分析、代码骨架生成、测试规划、GitHub Actions、ArgoCD 自动部署，并且需要清晰日志和失败回放。</textarea>
+          </label>
+          <button type="submit">生成运行结果</button>
+        </form>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <div class="panel-head">
+            <h2>执行摘要</h2>
+            <p id="summary">等待任务执行。</p>
+          </div>
+          <div id="timeline" class="timeline"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <h2>输出工件</h2>
+            <p>点击文件名可查看内容。</p>
+          </div>
+          <div id="artifacts" class="artifact-list"></div>
+        </article>
+      </section>
+
+      <section class="panel viewer">
+        <div class="panel-head">
+          <h2>工件内容</h2>
+          <p id="artifact-path">尚未选择工件</p>
+        </div>
+        <pre id="artifact-content">等待任务执行。</pre>
+      </section>
+    </main>
+    <script src="/static/app.js" defer></script>
+  </body>
+  </html>
+

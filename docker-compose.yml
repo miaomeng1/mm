@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  mimoforge:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      MIMOFORGE_ENABLE_LLM: "false"
+      MIMOFORGE_DATA_DIR: /srv/mimoforge/data
+    volumes:
+      - ./data:/srv/mimoforge/data
+
