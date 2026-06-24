@@ -1,10 +1,6 @@
 # MimoForge
 
-MimoForge is a GitHub-ready demo for a long-context, multi-agent software-delivery platform designed around the exact value proposition of a million-token model. Instead of stopping at code snippets, it turns a natural-language requirement plus an optional linked repository into a full delivery pack: requirement brief, repository context summary, solution blueprint, runnable starter code, quality plan, GitHub Actions workflow, ArgoCD manifest, and guard report.
 
-![status](https://img.shields.io/badge/status-demo-orange)
-![python](https://img.shields.io/badge/python-3.11+-blue)
-![license](https://img.shields.io/badge/license-MIT-green)
 
 ## Why This Project Is Competitive
 
